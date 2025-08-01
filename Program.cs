@@ -1,0 +1,46 @@
+﻿using GenerateCQRSComunicador.App;
+using GenerateCQRSComunicador.ConfigGenerateEntities;
+
+namespace GenerateCQRSComunicador;
+class Program
+{
+    static void Main(string[] args)
+    {
+        var generator = new Generate();
+        Console.WriteLine($">>>>>>>>>>>>>>>> Init Generate:  {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}");
+        //var entity = ConfigGenerateStudent.GetConfig(); // Student
+        //  var entity = ConfigGenerateCar.GetConfig(); // Car
+        // var entity = ConfigGenerateModelo.GetConfig(); // Modelo
+        //var entity = ConfigGeneratePedidosContactosMotivos.GetConfig(); // Modelo
+        //var entity = ConfigGeneratePedidos.GetConfig(); // Modelo
+        var entity = ConfigGenerateParametrosConfig.GetConfig(); // ParametrosConfig
+        //var entity = ConfigGenerateAgentes.GetConfig(); 
+        //var entity = ConfigGenerateGrupos.GetConfig(); 
+        //var entity = ConfigGenerateProcesos.GetConfig(); 
+        //var entity = ConfigGenerateEtapas.GetConfig(); 
+        //var entity = ConfigGenerateEtapasRelaciones.GetConfig(); 
+        // var entity = ConfigGenerateAlumnosInfo.GetConfig(); 
+        // var entity = ConfigGenerateOrigenesAtencion.GetConfig(); 
+        // var entity = ConfigGenerateFinalidades.GetConfig(); 
+        //var entity = ConfigGenerateFinalidadesGrupos.GetConfig(); 
+        //var entity = ConfigGenerateAcciones.GetConfig(); 
+        // var entity = ConfigGenerateCasos.GetConfig(); 
+        //var entity = ConfigGenerateCasosEtapas.GetConfig(); 
+        //var entity = ConfigGenerateCasosAgentes.GetConfig();
+        //var entity = ConfigGenerateCasosPedidos.GetConfig(); 
+        //var entity = ConfigGenerateCasosLogs.GetConfig(); 
+        //var entity = ConfigGenerateTiposClasificaciones.GetConfig(); 
+        // var entity = ConfigGenerateEquiposDistribucion.GetConfig(); 
+        //var entity = ConfigGenerateEquiposDistribucionAgentes.GetConfig(); 
+        //var entity = ConfigGenerateEquiposDistribucionAgentesAsignaciones.GetConfig();         
+        // var entity = ConfigGenerateEquiposDistribucionGrupos.GetConfig();
+        //var entity = ConfigGenerateEquiposDistribucionTiposClasificaciones.GetConfig();
+        //var entity = ConfigGenerateVentaCobrosGestores.GetConfig();
+        //var entity = ConfigGenerateAgentesGrupos.GetConfig();
+        //var entity = ConfigGenerateCasosVentasCobros.GetConfig();
+        //var entity = ConfigGenerateAreas.GetConfig();
+        //var entity = ConfigGenerateAgentesAreas.GetConfig();
+        generator.Execute(entity);
+        Console.WriteLine($">>>>>>>>>>>>>>>> Finish Generate {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}");
+    }
+}

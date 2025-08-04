@@ -29,11 +29,11 @@ public class GenerateDomainMain
     }
     public void GenerateContractsRepositoryFiles(GenerateParams model)
     {
-        /* ProjectFile.CreateFile(new CreateFileParams{
+        ProjectFile.CreateFile(new CreateFileParams{
             Path = PathApplication.DomainContractsRepositories.FullPath,
             FileName = $"I{model.PluralName}Repository.cs",
             Content = _generateContractRepositoryContent.GetGenerateContractRepositoryContent(model)
-        }); */
+        });
     }
 
     public void GenerateSpecificationsFiles(GenerateParams model)

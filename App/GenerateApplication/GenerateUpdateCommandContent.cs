@@ -69,7 +69,7 @@ public class GenerateUpdateCommandContent : GenerateBase
         content += $"using {PathApplication.ApplicationServices.NameSpace};{_singlelb}";
         content += $"using {PathApplication.ApplicationServicesInterfaces.NameSpace};{_singlelb}";
         content += $"using {PathApplication.DomainAggregateModel.NameSpace}.{agregateModelSpace};{_singlelb}";
-        /* content += $"using {PathApplication.DomainContractsRepositories.NameSpace};{_singlelb}"; */
+        content += $"using {PathApplication.DomainContractsRepositories.NameSpace};{_singlelb}"; 
         content += $"using {NameSpaceProject}.{PathProject.Infrastructure}.Enums;{_singlelb}";
         content += $"using {NameSpaceProject}.{PathProject.Infrastructure}.Exceptions;{_singlelb}";
         content += $"using {NameSpaceProject}.{PathProject.Infrastructure}.Models.Response;{_singlelb}";

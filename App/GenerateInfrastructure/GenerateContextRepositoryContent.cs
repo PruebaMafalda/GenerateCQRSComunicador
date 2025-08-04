@@ -6,9 +6,9 @@ public class GenerateContextRepositoryContent : GenerateBase
     {
         var agregateModelSpace = !string.IsNullOrEmpty(model.AgregateModel) ? model.AgregateModel : model.PluralName;
         var content = $"using {PathApplication.DomainAggregateModel.NameSpace}.{agregateModelSpace};{_singlelb}";
-        /* content += $"using {PathApplication.DomainContractsPersistance.NameSpace};{_singlelb}"; */
-        /* content += $"using {PathApplication.DomainContractsRepositories.NameSpace};{_doublelb}"; */
-        /* content += $"namespace {PathApplication.InfrastructureRepositories.NameSpace}{_singlelb}"; */
+        content += $"using {PathApplication.DomainContractsPersistance.NameSpace};{_singlelb}";
+        content += $"using {PathApplication.DomainContractsRepositories.NameSpace};{_doublelb}";
+        content += $"namespace {PathApplication.InfrastructureRepositories.NameSpace}{_singlelb}";
         content += $"{{{_singlelb}";
         content += $"{_space}/// <summary>Repository of {model.PluralName}.</summary>{_singlelb}";
         content += $"{_space}public class {model.PluralName}Repository : BaseRepository<{model.SingularName}>, I{model.PluralName}Repository{_singlelb}";

@@ -27,3 +27,4 @@ D:\MafaldaProyects\GenerateCQRSComunicador\obj\Debug\net8.0\refint\GenerateCQRSC
 D:\MafaldaProyects\GenerateCQRSComunicador\obj\Debug\net8.0\GenerateCQRSComunicador.pdb
 D:\MafaldaProyects\GenerateCQRSComunicador\obj\Debug\net8.0\GenerateCQRSComunicador.genruntimeconfig.cache
 D:\MafaldaProyects\GenerateCQRSComunicador\obj\Debug\net8.0\ref\GenerateCQRSComunicador.dll
+D:\MafaldaProyects\GenerateCQRSComunicador\obj\Debug\net8.0\GenerateCQRSComunicador.sourcelink.json

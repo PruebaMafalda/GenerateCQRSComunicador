@@ -63,11 +63,18 @@ public class SpaceProject{
 public class PathApplication
 {
     public static SpaceProject DomainAggregateModel = new SpaceProject($"{PathProject.Domain}.AggregateModel");
+
+    public static SpaceProject DomainContractsRepositories = new SpaceProject($"{PathProject.Domain}.Contracts.Infrastructure.Repositories"); 
+    public static SpaceProject DomainContractsPersistance = new SpaceProject($"{PathProject.Domain}.Contracts.Infrastructure"); 
     
-    public static SpaceProject DomainSpecifications = new SpaceProject($"{PathProject.Domain}.Specifications.EF");
+    public static SpaceProject DomainSpecifications = new SpaceProject($"{PathProject.Domain}.Specifications");
+
+    public static SpaceProject InfrastructureEntityConfiguration = new SpaceProject($"{PathProject.Infrastructure}.Context.EntityConfigurations"); 
+    public static SpaceProject InfrastructureRepositories = new SpaceProject($"{PathProject.Infrastructure}.Context.Repositories"); 
     
     public static SpaceProject ApplicationAppContext = new SpaceProject($"{PathProject.Application}.AppContext");
     public static SpaceProject ApplicationServicesInterfaces = new SpaceProject($"{PathProject.Application}.Services.Interfaces");
+
     public static SpaceProject ApplicationServices = new SpaceProject($"{PathProject.Application}.Services");
     public static SpaceProject ApplicationControllers = new SpaceProject($"{PathProject.Application}.Controllers");
     public static SpaceProject ApplicationLocalizationResources = new SpaceProject($"{PathProject.Application}.Localization.Resources");

@@ -76,7 +76,7 @@ public class GenerateGetByFilterQueryContent : GenerateBase
         content += $"using AutoMapper.QueryableExtensions;{_singlelb}";
         content += $"using MediatR;{_singlelb}";
         content += $"using Microsoft.EntityFrameworkCore;{_singlelb}";
-        /* content += $"using {PathApplication.DomainContractsRepositories.NameSpace};{_singlelb}"; */
+        content += $"using {PathApplication.DomainContractsRepositories.NameSpace};{_singlelb}"; 
         content += $"using {PathApplication.DomainSpecifications.NameSpace}.{model.PluralName};{_doublelb}";
 
         content += $"namespace {PathApplication.ApplicationAppContext.NameSpace}.{model.PluralName}.Queries.Get{model.PluralName}ByFilter{_singlelb}";

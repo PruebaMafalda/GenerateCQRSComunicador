@@ -72,7 +72,7 @@ public class GenerateGetByIdQueryContent : GenerateBase
         var pkField = model.Fields.FirstOrDefault(x => x.IsPrimaryKey);
         var content = $"using AutoMapper;{_singlelb}";
         content += $"using {PathApplication.DomainAggregateModel.NameSpace}.{agregateModelSpace};{_singlelb}";
-        /* content += $"using {PathApplication.DomainContractsRepositories.NameSpace};{_singlelb}"; */
+        content += $"using {PathApplication.DomainContractsRepositories.NameSpace};{_singlelb}"; 
         content += $"using {NameSpaceProject}.{PathProject.Infrastructure}.Exceptions;{_singlelb}";
         content += $"using {NameSpaceProject}.{PathProject.Infrastructure}.Models.Response;{_singlelb}";
         content += $"using MediatR;{_doublelb}";

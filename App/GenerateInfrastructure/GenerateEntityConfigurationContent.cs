@@ -15,7 +15,7 @@ public class GenerateEntityConfigurationContent : GenerateBase
         content += $"using Microsoft.EntityFrameworkCore;{_singlelb}";
         content += $"using Microsoft.EntityFrameworkCore.Metadata.Builders;{_doublelb}";
 
-        /* content += $"namespace {PathApplication.InfrastructureEntityConfiguration.NameSpace}{_singlelb}"; */
+        content += $"namespace {PathApplication.InfrastructureEntityConfiguration.NameSpace}{_singlelb}";
         content += $"{{{_singlelb}";
         content += $"{_space}/// <summary>EF configuration for the {model.SingularName} entity.</summary>{_singlelb}";
         content += $"{_space}public class {model.SingularName}EntityConfiguration : IEntityTypeConfiguration<{model.SingularName}>{_singlelb}";

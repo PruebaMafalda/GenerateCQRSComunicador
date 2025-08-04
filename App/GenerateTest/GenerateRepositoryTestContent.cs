@@ -7,7 +7,7 @@ public class GenerateRepositoryTestContent : GenerateBase
         var agregateModelSpace = !string.IsNullOrEmpty(model.AgregateModel) ? model.AgregateModel : model.PluralName;
         var content = $"using {PathApplication.ApplicationServicesInterfaces.NameSpace};{_singlelb}";
         content += $"using {PathApplication.DomainAggregateModel.NameSpace}.{agregateModelSpace};{_singlelb}";
-        /* content += $"using {PathApplication.InfrastructureRepositories.NameSpace};{_singlelb}"; */
+        content += $"using {PathApplication.InfrastructureRepositories.NameSpace};{_singlelb}";
         content += $"using {NameSpaceProject}.Tests.Configuration.EntityFramework;{_singlelb}";
         content += $"using Microsoft.EntityFrameworkCore;{_singlelb}";
         content += $"using Microsoft.EntityFrameworkCore.ChangeTracking;{_singlelb}";

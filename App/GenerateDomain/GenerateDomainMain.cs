@@ -11,7 +11,7 @@ public class GenerateDomainMain
         // generate agregate model
         GenerateAgregateModelFiles(model);
         // generate Contracts
-        /* GenerateContractsRepositoryFiles(model); */
+        GenerateContractsRepositoryFiles(model);
         if (!model.GenerateOnlyModel)
         {
             // generate specifications

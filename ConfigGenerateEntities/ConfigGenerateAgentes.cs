@@ -31,17 +31,7 @@ public class ConfigGenerateAgentes
                 Type = FieldType.Int,
                 Description = "Identificador del agente",
                 IsPrimaryKey = true,
-                IsAutoIncrement = true
-            },
-            new EntityField
-            {
-                Name = "IdEmpleado",
-                Type = FieldType.Int,
-                Description = "Identificador del empleado asociado",
-                IsRequired = true,
-                SpanishName = "IdEmpleado",
-                EnglishName = "EmployeeId",
-                TestExample = "123"
+                IsAutoIncrement = false
             },
             new EntityField
             {

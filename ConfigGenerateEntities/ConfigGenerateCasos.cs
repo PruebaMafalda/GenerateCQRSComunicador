@@ -49,6 +49,57 @@ public class ConfigGenerateCasos
                 EnglishName = "Student",
                 TestExample = "123"
             },
+
+            //? Nuevos Campos
+            new EntityField
+            {
+                Name = "IdEtapaActual",
+                Type = FieldType.Int,
+                Description = "Etapa Actual del Caso",
+                IsRequired = true,
+                SpanishName = "IdEtapaActual",
+                EnglishName = "IdActualState",
+                TestExample = "101"
+            },
+
+            new EntityField
+            {
+                Name = "FechaCambioEtapa",
+                Type = FieldType.DateTime,
+                Description = "Fecha cambio etapa del caso",
+                IsRequired = false,
+                SpanishName = "FechaCambioEtapa",
+                EnglishName = "StateDate",
+                TestExample = "2025-01-15T09:45:00"
+            },
+
+             new EntityField
+            {
+                Name = "IdAgenteAsignado",
+                Type = FieldType.Int,
+                Description = "Identificador del agente Asignado",
+                IsRequired = true,
+                IsForeignKey = true,
+                ForeignKeyObject = "Agente",
+                ForeignKeyTable = "Agentes",
+                IsEspecification = true,
+                SpanishName = "Agente",
+                EnglishName = "Agent",
+                TestExample = "30"
+            },
+
+            new EntityField
+            {
+                Name = "FechaAgenteAsignado",
+                Type = FieldType.DateTime,
+                Description = "Fecha asignacion agente",
+                IsRequired = false,
+                SpanishName = "FechaAgenteAsignado",
+                EnglishName = "AgentAssignDate",
+                TestExample = "2025-01-15T09:45:00"
+            },
+
+
             new EntityField
             {
                 Name = "IdProceso",

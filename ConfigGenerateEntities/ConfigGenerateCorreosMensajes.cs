@@ -19,6 +19,7 @@ public class ConfigGenerateCorreosMensajes
         config.CrudTypes = new List<CrudType>
         {
             CrudType.Create,
+            CrudType.Update,
             CrudType.GetByFilter,
             CrudType.GetById
         };
@@ -249,8 +250,7 @@ public class ConfigGenerateCorreosMensajes
                 EnglishName = "Handling Agent",
                 TestExample = "3"
             },
-            
-           
+                       
             new EntityField
             {
                 Name = "IdAlumnoInfo",
@@ -263,7 +263,17 @@ public class ConfigGenerateCorreosMensajes
                 SpanishName = "Alumno",
                 EnglishName = "Student",
                 TestExample = "1234"
-            }
+            },
+            new EntityField
+            {
+                Name = "Estado",
+                Type = FieldType.Int,
+                Description = "Estado de la Comunicacion",
+                IsRequired = false,                
+                SpanishName = "Estado",
+                EnglishName = "State",
+                TestExample = "103"
+            },
         };
 
         return config;

@@ -35,15 +35,12 @@ public class ConfigGenerateProyectosJira
             new EntityField
             {
                 Name = "Key",
-                Type = FieldType.String,
+                Type = FieldType.Int,
                 Description = "key del proyecto",
-                Length = 50,
-                IsRequired = true,
-                IsEspecification = true,
-                EspecificationType = EspecificationType.Contains,
+                IsRequired = false,
                 SpanishName = "Key",
                 EnglishName = "Key",
-                TestExample = "FFFFF"
+                TestExample = "10013"
             },
             new EntityField
             {

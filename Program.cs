@@ -40,12 +40,23 @@ class Program
         //var entity = ConfigGenerateCanales.GetConfig();
         //var entity = ConfigGenerateGruposCanales.GetConfig();
         //var entity = ConfigGenerateAgentesCanales.GetConfig();
-        //var entity = ConfigGenerateCasosCorreosMensajes.GetConfig()
+        //var entity = ConfigGenerateCasosCorreosMensajes.GetConfig();
         //var entity = ConfigGenerateProyectosJira.GetConfig();
         //var entity = ConfigGenerateTiposJira.GetConfig();
         //var entity = ConfigGenerateEstadosJira.GetConfig();
         //var entity = ConfigGenerateJiraIssues.GetConfig();
-        var entity = ConfigGenerateIssueComentariosJira.GetConfig();
+        //var entity = ConfigGenerateIssueComentariosJira.GetConfig();
+        //var entity = ConfigGenerateCasosJirasMensajes.GetConfig();
+        //var entity = ConfigGenerateJirasMensajesResumenIA.GetConfig();
+        //var entity = ConfigGenerateAgentesCorreosBuzones.GetConfig();
+        //var entity = ConfigGenerateMensajesAlumnoIA.GetConfig();
+        //var entity = ConfigGenerateMensajesResumenIA.GetConfig();
+        //var entity = ConfigGenerateEtiquetas.GetConfig();
+        //var entity = ConfigGeneratePlantillas.GetConfig();
+        //var entity = ConfigGenerateDepartamentosExternos.GetConfig();
+        //var entity = ConfigGenerateCasosHistorialAsignaciones.GetConfig();
+        var entity = ConfigGenerateIssueAdjuntosJira.GetConfig();
+        
         generator.Execute(entity);
         Console.WriteLine($">>>>>>>>>>>>>>>> Finish Generate {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}");
     }

@@ -32,6 +32,16 @@ public class ConfigGenerateTiposJira
             },
             new EntityField
             {
+                Name = "Key",
+                Type = FieldType.Int,
+                Description = "key del TipoJira",
+                IsRequired = false,
+                SpanishName = "Key",
+                EnglishName = "Key",
+                TestExample = "1"
+            },
+            new EntityField
+            {
                 Name = "Tipo",
                 Type = FieldType.String,
                 Description = "Tipo del jira", // ? userHistoria,tarea,error,hito etc

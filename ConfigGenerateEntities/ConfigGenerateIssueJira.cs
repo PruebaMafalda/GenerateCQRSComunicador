@@ -39,7 +39,7 @@ namespace GenerateCQRSComunicador.ConfigGenerateEntities
                 new EntityField
                 {
                     Name = "IdIssueIntegracion",
-                    Type = FieldType.Int,
+                    Type = FieldType.String, // ? Debe ser string no int
                     Description = "Id del issue en el sistema de integración",
                     IsRequired = true,
                     IsEspecification = true,
@@ -228,7 +228,33 @@ namespace GenerateCQRSComunicador.ConfigGenerateEntities
                     SpanishName = "Estado Jira",
                     EnglishName = "Jira State",
                     TestExample = "2"
-                }
+                },
+                new EntityField
+                {
+                    Name = "IdAlumnoInfo",
+                    Type = FieldType.Int,
+                    Description = "Alumno relacionado",
+                    IsRequired = false,
+                    IsForeignKey = true,
+                    ForeignKeyEntity = "AlumnoInfo",
+                    ForeignKeyObject = "AlumnoInfo",
+                    ForeignKeyTable = "AlumnosInfo",
+                    ForeignKeyField = "Id",
+                    SpanishName = "Alumno",
+                    EnglishName = "Student",
+                    TestExample = "1234"
+                },
+
+                new EntityField
+                {
+                    Name = "Estado",
+                    Type = FieldType.Int,
+                    Description = "Estado de la comunicacion",
+                    IsRequired = false,
+                    SpanishName = "Estado",
+                    EnglishName = "State",
+                    TestExample = "103"
+                },
             };
 
             return jiraIssue;

@@ -3,9 +3,9 @@ public class PathProject{
     /* public static string Root = "D:\\MafaldaProyects\\DemoGenerate\\AppDemo";    
     public static string RootTest = "D:\\MafaldaProyects\\DemoGenerate\\AppDemoTest";  */
     
-    public static string Root = "D:\\MafaldaProyects\\core-comunicador-be\\Core.Comunicador.Be";
-    public static string RootTest = "D:\\MafaldaProyects\\core-comunicador-be\\Core.Comunicador.Be.Tests"; 
-    public static string PostmanCollection = "D:\\MafaldaProyects\\GeneratePostman\\Comunicador";
+    public static string Root = "D:\\UnirProyects\\core-comunicador-be\\Core.Comunicador.Be";
+    public static string RootTest = "D:\\UnirProyects\\core-comunicador-be\\Core.Comunicador.Be.Tests"; 
+    public static string PostmanCollection = "D:\\UnirProyects\\GeneratePostman\\Comunicador";
     public static string Application = "Application";
     public static string Domain = "Domain";
     public static string Infrastructure = "Infrastructure";

@@ -2,7 +2,7 @@ using GenerateCQRSComunicador.Utils;
 
 namespace GenerateCQRSComunicador.ConfigGenerateEntities
 {
-    public class ConfigGenerateCasosCorreosMensajes
+    public class ConfigGenerateCasosJirasMensajes
     {
         public static GenerateParams GetConfig()
         {
@@ -11,12 +11,12 @@ namespace GenerateCQRSComunicador.ConfigGenerateEntities
             //? Solo generar el modelo (sin CRUDs ni controller)
             config.GenerateOnlyModel = true;
 
-            config.ConrollerRoute = "casos-correos-mensajes";
+            config.ConrollerRoute = "casos-jiras-mensajes";
             config.AgregateModel  = "Casos"; // ? Hacer referencia al nombre de la carpeta
-            config.SpanishName    = "CasoCorreoMensaje";
-            config.EnglishName    = "CaseMailMessage";
-            config.SingularName   = "CasoCorreoMensaje";
-            config.PluralName     = "CasosCorreosMensajes";
+            config.SpanishName    = "CasoJiraMensaje";
+            config.EnglishName    = "CaseJiraMessage";
+            config.SingularName   = "CasoJiraMensaje";
+            config.PluralName     = "CasosJirasMensajes";
             config.auditable      = null;
 
             config.CrudTypes = new List<CrudType>();
@@ -27,7 +27,7 @@ namespace GenerateCQRSComunicador.ConfigGenerateEntities
                 {
                     Name = "Id",
                     Type = FieldType.Int,
-                    Description = "Identificador del registro (PK, autoincremental)",
+                    Description = "Identificador del registro",
                     IsPrimaryKey = true,
                     IsAutoIncrement = true,
                     SpanishName = "Id",
@@ -50,20 +50,21 @@ namespace GenerateCQRSComunicador.ConfigGenerateEntities
                     EnglishName = "Case",
                     TestExample = "1001",
                     
+                    
                 },
                 new EntityField
                 {
-                    Name = "IdMensaje",
+                    Name = "IdJira",
                     Type = FieldType.Int,
-                    Description = "Identificador del CorreoMensaje",
+                    Description = "Identificador del Jira",
                     IsRequired = false,
                     IsEspecification = true,
                     IsForeignKey = true,
-                    ForeignKeyObject = "CorreoMensaje",
-                    ForeignKeyTable  = "CorreosMensajes",
-                    SpanishName = "Mensaje",
-                    EnglishName = "Message",
-                    TestExample = "5005"
+                    ForeignKeyObject = "JiraIssue",
+                    ForeignKeyTable  = "JirasIssues",
+                    SpanishName = "Jira",
+                    EnglishName = "JiraIssue",
+                    TestExample = "VUO-4455"
                 }
             };
 

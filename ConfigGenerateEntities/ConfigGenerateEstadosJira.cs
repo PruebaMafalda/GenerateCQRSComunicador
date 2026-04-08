@@ -32,6 +32,16 @@ public class ConfigGenerateEstadosJira
             },
             new EntityField
             {
+                Name = "Key",
+                Type = FieldType.Int,
+                Description = "key del EstadoJira",
+                IsRequired = false,
+                SpanishName = "Key",
+                EnglishName = "Key",
+                TestExample = "1"
+            },
+            new EntityField
+            {
                 Name = "Nombre",
                 Type = FieldType.String,
                 Description = "Nombre del estado jira", // ? nueva,bloqueada, desestimada, resuelta

@@ -2,22 +2,20 @@ using GenerateCQRSComunicador.Utils;
 
 namespace GenerateCQRSComunicador.ConfigGenerateEntities
 {
-    public class ConfigGenerateCasosCorreosMensajes
+    public class ConfigGenerateCasosHistorialAsignaciones
     {
         public static GenerateParams GetConfig()
         {
             var config = new GenerateParams();
 
-            //? Solo generar el modelo (sin CRUDs ni controller)
             config.GenerateOnlyModel = true;
-
-            config.ConrollerRoute = "casos-correos-mensajes";
-            config.AgregateModel  = "Casos"; // ? Hacer referencia al nombre de la carpeta
-            config.SpanishName    = "CasoCorreoMensaje";
-            config.EnglishName    = "CaseMailMessage";
-            config.SingularName   = "CasoCorreoMensaje";
-            config.PluralName     = "CasosCorreosMensajes";
-            config.auditable      = null;
+            config.ConrollerRoute = "casos-historial-asignaciones";
+            config.AgregateModel  = "Casos";
+            config.SpanishName    = "CasoHistorialAsignacion";
+            config.EnglishName    = "CaseAssignmentHistory";
+            config.SingularName   = "CasoHistorialAsignacion";
+            config.PluralName     = "CasosHistorialAsignaciones";
+            config.auditable      = Auditable.Full;
 
             config.CrudTypes = new List<CrudType>();
 
@@ -36,34 +34,35 @@ namespace GenerateCQRSComunicador.ConfigGenerateEntities
                 },
                 new EntityField
                 {
-                    Name = "IdCaso",
+                    Name = "IdCasoOrigen",
                     Type = FieldType.Int,
-                    Description = "Identificador del Caso",
+                    Description = "Identificador del Caso Origen",
                     IsRequired = false,
                     IsEspecification = true,
                     IsForeignKey = true,
                     ForeignKeyEntity = "Caso",
-                    ForeignKeyObject = "Caso",
+                    ForeignKeyObject = "CasoOrigen",
                     ForeignKeyTable  = "Casos",
                     ForeignKeyField = "Id",
-                    SpanishName = "Caso",
-                    EnglishName = "Case",
-                    TestExample = "1001",
-                    
+                    SpanishName = "Caso Origen",
+                    EnglishName = "Source Case",
+                    TestExample = "1001"
                 },
                 new EntityField
                 {
-                    Name = "IdMensaje",
+                    Name = "IdCasoDestino",
                     Type = FieldType.Int,
-                    Description = "Identificador del CorreoMensaje",
+                    Description = "Identificador del Caso Destino",
                     IsRequired = false,
                     IsEspecification = true,
                     IsForeignKey = true,
-                    ForeignKeyObject = "CorreoMensaje",
-                    ForeignKeyTable  = "CorreosMensajes",
-                    SpanishName = "Mensaje",
-                    EnglishName = "Message",
-                    TestExample = "5005"
+                    ForeignKeyEntity = "Caso",
+                    ForeignKeyObject = "CasoDestino",
+                    ForeignKeyTable  = "Casos",
+                    ForeignKeyField = "Id",
+                    SpanishName = "Caso Destino",
+                    EnglishName = "Target Case",
+                    TestExample = "1002"
                 }
             };
 
